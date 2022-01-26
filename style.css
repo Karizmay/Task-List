@@ -1,0 +1,204 @@
+@media screen and (min-width: 600px) {
+    body {
+        font-size: 1.5em;
+    }
+    #note {
+        background: url("note.png");
+        width: 566px;
+        height: 743px;
+    }
+    #input-task::placeholder {
+        font-size: 2em;
+    }
+    #input-task:hover::placeholder {
+        font-size: 2em;
+        color: rgba(132,140,253,0.4);
+    }
+    #add-task {
+        width: 90%;
+    }
+    #no-tasks p{
+        font-size: 2em;
+     }
+}
+@media screen and (max-width: 599px) {
+    body {
+        width: 100%;
+        font-size: 1.3em;
+        overflow: visible;
+    }
+    #note {
+        background: url("note_mbl.png");
+        width: 355px;
+        height: 703px;
+    }
+    #input-task::placeholder {
+        font-size: 1.7em;
+    }
+    #input-task:hover::placeholder {
+        font-size: 1.7em;
+        color: rgba(0,0,0,0.4);
+    }
+    #add-task {
+        width: 100%;
+    }
+    #no-tasks p{
+        font-size: 1.7em;
+    }
+    #no-tasks p{
+        width: 80%;
+    }
+    #no-tasks img{
+        width: 80%;
+    }
+}
+@font-face {
+    font-family: Caveat;
+    font-weight: normal;
+    src: url(fonts/Caveat-Regular.ttf) format("truetype");
+}
+@font-face {
+    font-family: Caveat;
+    font-weight: bold;
+    src: url(fonts/Caveat-Bold.ttf) format("truetype");
+}
+
+body {
+    color: rgba(0,0,0,0.8);
+    font-family: Caveat, sans-serif;
+}
+
+#note {
+    box-sizing: border-box;
+    margin: auto;
+    padding: 80px 40px 20px 40px;
+    position: relative;
+}
+
+#date {
+    margin: 20px 0 20px 0;
+    padding-right: 20px;
+    text-align: right;
+}
+
+h1 {
+    font-weight: bold;
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+/* Input section */
+#add-task {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 50px auto;
+}
+
+#input-task {
+    border-width: 0 0 2px 0;
+    border-color: rgba(0,0,0,0.6);
+    flex-grow: 1;
+}
+#input-task:hover {
+    border-color: rgba(132,140,253,1);
+}
+#input-task::placeholder {
+    font-family: Caveat, sans-serif;
+}
+.select::placeholder {
+    color: rgba(226,126,182,1);
+}
+.no-select::placeholder {
+    color: rgba(0,0,0,0.4);
+}
+#input-task:hover::placeholder {
+    font-family: Caveat, sans-serif;
+    color: rgba(132,140,253,0.4);
+}
+#add-task-button {
+    color: rgba(0,0,0,0.8);
+    font: bold 3em Caveat, sans-serif;
+    line-height: 0.5;
+    padding: 0 0 10px 5px;
+}
+#add-task-button:hover {
+    color: rgba(132,140,253,1);
+}
+/* End of input section */
+
+/* List section */
+ul {
+    height: 365px;
+    overflow-y: auto;
+    padding: 0;
+    width: 100%;
+}
+
+li {
+    align-items: start;
+    display: flex;
+    margin-bottom: 7px;
+}
+
+.check {
+    opacity: 1;
+    height: 25px;
+    margin: 0;
+    width: 25px;
+}
+.check::before {
+    background-color: lightgrey;
+    color: rgba(0,0,0,0.8);
+    content: "";
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+}
+.check:hover::before {
+    background-color: rgba(132,140,253,1);
+}
+.check:checked::before {
+    background-color: rgba(233,158,57,1);
+    box-sizing: border-box;
+    color: rgba(0,0,0,0.6);
+    content: "V";
+    font: bold 2em Caveat, sans-serif;
+    height: 25px;
+    padding-left: 5px;
+    width: 25px;
+}
+
+.task {
+    box-sizing: border-box;
+    flex-grow: 1;
+    margin: 0px 10px 0px 10px;
+    width: 100%;
+}
+.delTask {
+    color: rgba(0,0,0,0.6);
+    font: normal 2em Caveat, sans-serif;
+    height: 30px;
+    line-height: 0.4;
+    width: 30px;
+}
+.delTask:hover {
+    color: rgba(132,140,253,1);
+}
+.task-done {
+    text-decoration: line-through;
+}
+#no-tasks {
+    bottom: 100px;
+    text-align: center;
+    position: absolute;
+    width: 85%;
+}
+
+#no-tasks p{
+    margin-bottom: 20px;
+}
+
+.hide {
+    display: none;
+}
+/* End of list section */
